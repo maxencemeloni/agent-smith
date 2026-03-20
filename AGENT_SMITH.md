@@ -39,29 +39,30 @@ You evaluate Claude Code setups by examining what users can actually configure. 
 
 Seven pillars, weighted by impact on real-world usage.
 
-### 1. Configuration Quality (15%)
+### 1. Security Posture (20%)
 
-**What:** Structure and completeness of `.claude/settings.json`
+**What:** Overall security of the configuration
 
 **Checks:**
-- Valid JSON syntax
-- Deny rules cover sensitive files
-- Allow rules are specific (not overly broad)
-- MCP servers properly defined (if present)
+- Deny rules for sensitive files (see Security Patterns below)
+- No `Bash(*)` in allow rules
+- Hooks don't run dangerous commands
+- MCP servers don't have excessive permissions
+- No hardcoded secrets in instruction files
 
 **Scoring:**
 
 | Score | Meaning |
 |-------|---------|
-| 9-10 | Complete deny rules, specific allows, valid structure |
-| 7-8 | Good coverage, minor gaps |
-| 5-6 | Basic rules, some overly broad patterns |
-| 3-4 | Missing critical protections |
-| 1-2 | Invalid or missing configuration |
+| 9-10 | Comprehensive protection |
+| 7-8 | Good security, minor gaps |
+| 5-6 | Basic protection only |
+| 3-4 | Missing critical rules |
+| 1-2 | Actively dangerous |
 
 ---
 
-### 2. Instruction Clarity (25%)
+### 2. Instruction Clarity (20%)
 
 **What:** Quality of `CLAUDE.md` and similar instruction files
 
@@ -85,7 +86,29 @@ Seven pillars, weighted by impact on real-world usage.
 
 ---
 
-### 3. Context Efficiency (20%)
+### 3. Configuration Quality (15%)
+
+**What:** Structure and completeness of `.claude/settings.json`
+
+**Checks:**
+- Valid JSON syntax
+- Permissions object properly structured
+- Allow rules are specific (not overly broad)
+- MCP servers properly defined (if present)
+
+**Scoring:**
+
+| Score | Meaning |
+|-------|---------|
+| 9-10 | Valid structure, specific allows, well-organized |
+| 7-8 | Good structure, minor gaps |
+| 5-6 | Basic structure, some overly broad patterns |
+| 3-4 | Malformed or incomplete |
+| 1-2 | Invalid or missing configuration |
+
+---
+
+### 4. Context Efficiency (15%)
 
 **What:** How well the configuration minimizes unnecessary context
 
@@ -110,7 +133,7 @@ Seven pillars, weighted by impact on real-world usage.
 
 ---
 
-### 4. Command Design (15%)
+### 5. Command Design (15%)
 
 **What:** Quality of custom slash commands in `.claude/commands/`
 
@@ -133,7 +156,7 @@ Seven pillars, weighted by impact on real-world usage.
 
 ---
 
-### 5. Hook Safety (10%)
+### 6. Hook Safety (10%)
 
 **What:** Safety and correctness of `.claude/hooks.json`
 
@@ -158,7 +181,7 @@ Seven pillars, weighted by impact on real-world usage.
 
 ---
 
-### 6. MCP Integration (10%)
+### 7. MCP Integration (5%)
 
 **What:** Quality of MCP server configurations
 
@@ -180,29 +203,6 @@ Seven pillars, weighted by impact on real-world usage.
 | 5-6 | Functional but overly permissive |
 | 3-4 | Misconfigured or risky |
 | 1-2 | Broken or dangerous |
-
----
-
-### 7. Security Posture (5%)
-
-**What:** Overall security of the configuration
-
-**Checks:**
-- Deny rules for sensitive files (see Security Patterns below)
-- No `Bash(*)` in allow rules
-- Hooks don't run dangerous commands
-- MCP servers don't have excessive permissions
-- No hardcoded secrets in instruction files
-
-**Scoring:**
-
-| Score | Meaning |
-|-------|---------|
-| 9-10 | Comprehensive protection |
-| 7-8 | Good security, minor gaps |
-| 5-6 | Basic protection only |
-| 3-4 | Missing critical rules |
-| 1-2 | Actively dangerous |
 
 ---
 

@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Claude_Code-Slash_Commands-blueviolet?style=for-the-badge" alt="Claude Code"/>
-  <img src="https://img.shields.io/badge/v1.2.0-Stable-green?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/v1.3.0-Stable-green?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/MIT-License-blue?style=for-the-badge" alt="License"/>
 </p>
 
@@ -81,13 +81,13 @@ claude
 
 | Pillar | Score | Notes |
 |--------|:-----:|-------|
-| Configuration Quality | 8/10 | Good deny rules |
+| Security Posture | 7/10 | Could add more deny rules |
 | Instruction Clarity | 8/10 | Well-structured CLAUDE.md |
+| Configuration Quality | 8/10 | Good structure |
 | Context Efficiency | 6/10 | Missing .claudeignore patterns |
 | Command Design | 9/10 | Clear, well-documented |
 | Hook Safety | N/A | No hooks configured |
 | MCP Integration | 7/10 | 3 servers configured |
-| Security Posture | 7/10 | Could add more deny rules |
 
 ## Content Overview
 
@@ -136,15 +136,15 @@ This audit measures **user-configurable content** only:
 
 ## The 7 Evaluation Areas
 
-| Area | What's Checked |
-|------|----------------|
-| **Configuration Quality** | settings.json structure, deny/allow rules |
-| **Instruction Clarity** | CLAUDE.md quality, structure, contradictions |
-| **Context Efficiency** | .claudeignore coverage, embedded vs referenced content |
-| **Command Design** | Custom command quality, naming, structure |
-| **Hook Safety** | hooks.json validity, dangerous commands |
-| **MCP Integration** | MCP server configuration quality |
-| **Security Posture** | Sensitive file protection, dangerous patterns |
+| Area | Weight | What's Checked |
+|------|:------:|----------------|
+| **Security Posture** | 20% | Sensitive file protection, dangerous patterns |
+| **Instruction Clarity** | 20% | CLAUDE.md quality, structure, contradictions |
+| **Configuration Quality** | 15% | settings.json structure, allow rules |
+| **Context Efficiency** | 15% | .claudeignore coverage, embedded vs referenced content |
+| **Command Design** | 15% | Custom command quality, naming, structure |
+| **Hook Safety** | 10% | hooks.json validity, dangerous commands |
+| **MCP Integration** | 5% | MCP server configuration quality |
 
 ---
 

@@ -2,6 +2,8 @@
 
 You are Agent Smith. Perform a **deep analysis** of instruction file quality.
 
+Refer to `AGENT_SMITH.md` for instruction clarity criteria.
+
 ## Input
 
 $ARGUMENTS - Local path to analyze (defaults to current directory)

@@ -2,6 +2,8 @@
 
 You are Agent Smith. Perform a **context efficiency audit** with measurable metrics.
 
+Refer to `AGENT_SMITH.md` for context efficiency criteria and project type patterns.
+
 ## Input
 
 $ARGUMENTS - Local path to audit (defaults to current directory)

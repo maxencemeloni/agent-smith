@@ -2,6 +2,8 @@
 
 You are Agent Smith. Perform **syntax and structure validation** of a Claude Code project configuration.
 
+Refer to `AGENT_SMITH.md` for validation patterns and security checks.
+
 This is a pass/fail validation, not a quality assessment. Use `/analyze-agent` for quality scoring.
 
 ## Input

@@ -2,6 +2,8 @@
 
 You are Agent Smith. Perform a **comprehensive analysis** of a Claude Code project configuration.
 
+Refer to `AGENT_SMITH.md` for pillar definitions, weights, and scoring criteria.
+
 ## Input
 
 $ARGUMENTS - Local path to analyze (defaults to current directory)
@@ -68,51 +70,15 @@ If version check fails (network error, missing files), silently continue with an
 
 ### Phase 3: Pillar Evaluation
 
-Evaluate each pillar with evidence from the files read:
+Evaluate each pillar using criteria from `AGENT_SMITH.md`:
 
-#### 1. Configuration Quality (15%)
-- Is `settings.json` valid JSON?
-- Are deny rules present for sensitive files?
-- Are allow rules specific or overly broad?
-- If MCP servers exist, are they properly configured?
-
-#### 2. Instruction Clarity (25%)
-- Are instruction files clear and unambiguous?
-- Is there logical structure with sections?
-- Are there contradictions between files?
-- Is content concise or bloated?
-- Are files referenced instead of content being copied?
-
-#### 3. Context Efficiency (20%)
-- Does `.claudeignore` exist?
-- Does it cover `.gitignore` patterns?
-- Is `.git/` included?
-- Are large binaries excluded?
-- Is content embedded that should be referenced?
-
-#### 4. Command Design (15%)
-- Do commands have clear names?
-- Do they handle `$ARGUMENTS`?
-- Is output format defined?
-- Is scope appropriate?
-- Is there redundancy?
-
-#### 5. Hook Safety (10%)
-- If `hooks.json` exists, is it valid JSON?
-- Are hook events valid?
-- Are commands safe (no `rm -rf`, `sudo`, etc.)?
-- Do referenced scripts exist?
-
-#### 6. MCP Integration (10%)
-- If MCP servers configured, are commands valid?
-- Are permissions appropriately scoped?
-- Are there overly broad access patterns?
-
-#### 7. Security Posture (5%)
-- Are sensitive file deny rules present?
-- Are there dangerous Bash allow patterns?
-- Do hooks expose secrets?
-- Are there hardcoded secrets in instructions?
+1. **Security Posture (20%)** — Deny rules, dangerous patterns, secrets
+2. **Instruction Clarity (20%)** — Clear, structured, no contradictions
+3. **Configuration Quality (15%)** — Valid JSON, proper structure
+4. **Context Efficiency (15%)** — .claudeignore, references over copies
+5. **Command Design (15%)** — Clear names, handles $ARGUMENTS, defined output
+6. **Hook Safety (10%)** — Valid events, safe commands, scripts exist
+7. **MCP Integration (5%)** — Valid commands, scoped permissions
 
 ### Phase 4: Scoring
 
@@ -154,13 +120,13 @@ Calculate weighted score. For pillars marked N/A, exclude and normalize remainin
 
 | Pillar | Score | Notes |
 |--------|:-----:|-------|
-| Configuration Quality | X/10 | [key observation] |
+| Security Posture | X/10 | [key observation] |
 | Instruction Clarity | X/10 | [key observation] |
+| Configuration Quality | X/10 | [key observation] |
 | Context Efficiency | X/10 | [key observation] |
 | Command Design | X/10 | [key observation] |
 | Hook Safety | X/10 or N/A | [key observation] |
 | MCP Integration | X/10 or N/A | [key observation] |
-| Security Posture | X/10 | [key observation] |
 
 ---
 

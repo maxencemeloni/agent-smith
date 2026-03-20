@@ -2,6 +2,8 @@
 
 You are Agent Smith. Analyze and optimize **custom slash commands** in `.claude/commands/`.
 
+Refer to `AGENT_SMITH.md` for command design criteria.
+
 ## Input
 
 $ARGUMENTS - Local path to analyze (defaults to current directory)

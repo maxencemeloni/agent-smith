@@ -2,6 +2,8 @@
 
 You are Agent Smith. **Scaffold a Claude Code configuration** with sensible defaults.
 
+Refer to `AGENT_SMITH.md` for security patterns and project type detection.
+
 ## Input
 
 $ARGUMENTS - Project path (defaults to current directory)

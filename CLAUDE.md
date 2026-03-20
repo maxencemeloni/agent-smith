@@ -24,14 +24,14 @@ Agent Smith is a set of slash commands for Claude Code that analyze, validate, a
 ## The 7-Pillar Evaluation System
 
 | Pillar | Weight | What It Measures |
-|--------|--------|------------------|
-| Configuration Quality | 15% | settings.json structure, deny/allow rules |
-| Instruction Clarity | 25% | CLAUDE.md quality, structure, contradictions |
-| Context Efficiency | 20% | .claudeignore coverage, duplication, references |
+|--------|:------:|------------------|
+| Security Posture | 20% | Sensitive file protection, dangerous patterns |
+| Instruction Clarity | 20% | CLAUDE.md quality, structure, contradictions |
+| Configuration Quality | 15% | settings.json structure, allow rules |
+| Context Efficiency | 15% | .claudeignore coverage, duplication, references |
 | Command Design | 15% | Custom command quality, naming, structure |
 | Hook Safety | 10% | hooks.json validity, dangerous commands |
-| MCP Integration | 10% | MCP server configuration quality |
-| Security Posture | 5% | Sensitive file protection, dangerous patterns |
+| MCP Integration | 5% | MCP server configuration quality |
 
 ### Why These Pillars?
 

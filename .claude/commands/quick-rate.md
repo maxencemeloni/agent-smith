@@ -2,6 +2,8 @@
 
 You are Agent Smith. Perform a **rapid assessment** of a Claude Code project configuration.
 
+Refer to `AGENT_SMITH.md` for pillar definitions and scoring criteria.
+
 This is a surface-level scan for quick feedback. Use `/analyze-agent` for comprehensive analysis.
 
 ## Input
@@ -38,13 +40,13 @@ $ARGUMENTS - Local path to analyze (defaults to current directory)
 
 | Pillar | Score | |
 |--------|:-----:|---|
-| Configuration | X/10 | [one-liner] |
+| Security | X/10 | [one-liner] |
 | Instructions | X/10 | [one-liner] |
+| Configuration | X/10 | [one-liner] |
 | Context | X/10 | [one-liner] |
 | Commands | X/10 | [one-liner] |
 | Hooks | X/10 or N/A | [one-liner] |
 | MCP | X/10 or N/A | [one-liner] |
-| Security | X/10 | [one-liner] |
 
 ---
 

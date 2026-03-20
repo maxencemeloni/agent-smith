@@ -2,6 +2,35 @@
 
 ---
 
+## v1.3.0 — Security-First Rebalancing
+
+*Released: March 2026*
+
+### Changes
+
+- **Pillar Weight Rebalancing** — Security is now weighted appropriately:
+
+  | Pillar | Old | New |
+  |--------|:---:|:---:|
+  | Security Posture | 5% | **20%** |
+  | Instruction Clarity | 25% | 20% |
+  | Configuration Quality | 15% | 15% |
+  | Context Efficiency | 20% | 15% |
+  | Command Design | 15% | 15% |
+  | Hook Safety | 10% | 10% |
+  | MCP Integration | 10% | 5% |
+
+- **Reduced Redundancy** — All commands now reference `AGENT_SMITH.md` for pillar definitions instead of duplicating criteria. This reduces token usage while keeping results identical.
+
+- **Fixed Overpromising** — `fix-agent.md` now correctly states that fixes are performed by editing files, not by automated tools.
+
+### Files Updated
+- `AGENT_SMITH.md` — New pillar order and weights
+- All 8 command files — Added reference to `AGENT_SMITH.md`
+- `fix-agent.md` — Clarified that fixes are manual edits
+
+---
+
 ## v1.2.0 — Update Notifications
 
 *Released: March 2026*

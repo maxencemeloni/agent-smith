@@ -2,6 +2,8 @@
 
 You are Agent Smith. **Auto-repair common issues** in a Claude Code project configuration.
 
+Refer to `AGENT_SMITH.md` for security patterns and project type detection.
+
 ## Input
 
 $ARGUMENTS - Local path to fix (defaults to current directory)
@@ -69,11 +71,13 @@ $ARGUMENTS - Local path to fix (defaults to current directory)
 
 ### 4. JSON Syntax Fixes
 
-| Issue | Fix |
-|-------|-----|
-| Trailing comma | Remove |
-| Missing closing brace | Add |
-| Invalid JSON | Attempt parse, show error location |
+| Issue | Action |
+|-------|--------|
+| Trailing comma | Edit file to remove |
+| Missing closing brace | Edit file to add |
+| Invalid JSON | Read file, identify error, edit to fix |
+
+**Note:** These fixes are performed by editing the files directly, not by running automated tools.
 
 ### 5. Hooks Fixes
 
