@@ -2,6 +2,28 @@
 
 ---
 
+## v1.2.0 — Update Notifications
+
+*Released: March 2026*
+
+### New Features
+
+- **Version Checking** — `/analyze-agent` now checks for updates before analysis:
+  - Reads local version from `~/.claude/agent-smith-version`
+  - Fetches latest version from GitHub
+  - Shows changelog between installed and latest version
+  - Provides update command
+
+- **VERSION file** — Track installed version for update checking
+
+### Files Updated
+- `VERSION` — New file containing current version
+- `install.sh` — Saves version to `~/.claude/agent-smith-version`
+- `install.ps1` — Same for Windows
+- `/analyze-agent` — Added Phase 0: Version Check
+
+---
+
 ## v1.1.0 — Action Plan & Attribution
 
 *Released: March 2026*
@@ -109,6 +131,13 @@ From 8 pillars to 7, removing unmeasurable dimensions:
 | Examples directory | Sample reports and configurations |
 | Self-analysis | Run Agent Smith on itself as a test |
 | Windows installer update | Update install.ps1 with new commands |
+
+### Recently Completed
+
+| Feature | Version |
+|---------|---------|
+| Update notifications | v1.2.0 |
+| Action plan checkboxes | v1.1.0 |
 
 ### Future Ideas
 
