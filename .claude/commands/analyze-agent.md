@@ -236,6 +236,13 @@ This analysis covers user-configurable components only. Claude Code's system pro
 
 ## After Analysis
 
-Ask: "Save this report as `AGENT_SMITH_REPORT.md`?"
+Use the `AskUserQuestion` tool to prompt the user:
+- **Question:** "Save this report as AGENT_SMITH_REPORT.md?"
+- **Header:** "Save report"
+- **Options:**
+  - `Yes` — "Save the full report to AGENT_SMITH_REPORT.md in the project root"
+  - `No` — "Skip saving, just display the report"
+
+If the user selects **Yes**, write the report to `AGENT_SMITH_REPORT.md` at the project root.
 
 Begin analysis now.

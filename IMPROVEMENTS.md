@@ -2,6 +2,19 @@
 
 ---
 
+## v1.3.1 — Interactive Report Save Prompt
+
+*Released: March 2026*
+
+### Changes
+
+- **Interactive save prompt** — `/analyze-agent` now uses `AskUserQuestion` to present an arrow-selectable Yes/No prompt when asking to save the report, instead of requiring the user to type a response.
+
+### Files Updated
+- `.claude/commands/analyze-agent.md` — Replaced plain text question with `AskUserQuestion` tool usage
+
+---
+
 ## v1.3.0 — Security-First Rebalancing
 
 *Released: March 2026*

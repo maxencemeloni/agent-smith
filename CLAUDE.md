@@ -151,7 +151,8 @@ claude-code-agent-smith/
 
 ## Wiki Structure
 
-The GitHub wiki is a separate repository: `claude-code-agent-smith.wiki.git`
+The GitHub wiki is a separate repository located at `/Users/mam/WebstormProjects/claude-code-agent-smith-wiki/`.
+**You must update the wiki yourself** when releasing a new version — do not ask the user to do it. Update `Roadmap.md` (version, history, recently completed table), then commit and push from the wiki repo.
 
 | Page | Purpose |
 |------|---------|
