@@ -237,6 +237,36 @@ See [IMPROVEMENTS.md](./IMPROVEMENTS.md) for roadmap and design principles.
 
 ---
 
+## Development
+
+When working on Agent Smith with Claude Code, the `CLAUDE.md` file at the project root provides development context including:
+
+- **Design principles** — Honesty over hype, scope clarity, evidence required
+- **7-pillar system** — Rationale for each evaluation area
+- **Out of scope** — What we explicitly don't measure (system prompt, model routing, etc.)
+- **Version management** — How to bump versions and update documentation
+- **Repository structure** — Where everything lives
+
+This context is only loaded when developing Agent Smith itself, not when users run the commands in their projects.
+
+### Release Checklist
+
+When releasing a new version:
+
+| Step | Files |
+|------|-------|
+| 1. Update version badge | `README.md` |
+| 2. Add changelog entry | `IMPROVEMENTS.md` |
+| 3. Update wiki | `Roadmap.md` (version + history) |
+| 4. Commit with format | `Release vX.Y.Z — Description` |
+| 5. Push main + wiki | Both repositories |
+
+### Wiki
+
+The [GitHub Wiki](https://github.com/maxencemeloni/claude-code-agent-smith/wiki) is maintained as a separate repository. When making changes that affect documentation, update both the README and relevant wiki pages.
+
+---
+
 ## License
 
 MIT
@@ -244,5 +274,7 @@ MIT
 ---
 
 <p align="center">
-  <a href="https://github.com/maxencemeloni/claude-code-agent-smith">GitHub</a>
+  <a href="https://github.com/maxencemeloni/claude-code-agent-smith">GitHub</a> ·
+  <a href="https://github.com/maxencemeloni/claude-code-agent-smith/wiki">Wiki</a> ·
+  <a href="https://hub.mmapi.fr/tools?origin=claudecode">More AI Tools</a>
 </p>
