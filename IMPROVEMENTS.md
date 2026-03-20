@@ -2,6 +2,29 @@
 
 ---
 
+## v1.1.0 — Action Plan & Attribution
+
+*Released: March 2026*
+
+### New Features
+
+- **Interactive Action Plan** — Reports now include a decision checklist organized by effort level:
+  - Option A: Quick Wins (Low Effort)
+  - Option B: Recommended (Medium Effort)
+  - Option C: Advanced (High Effort)
+
+  Each optimization has Accept/Reject/Defer checkboxes for easy decision tracking.
+
+- **Report Attribution** — Footer now includes:
+  - Link to Agent Smith GitHub repository
+  - Link to AI tools hub for discovering more tools
+
+### Files Updated
+- `/analyze-agent` — Added Action Plan section and footer
+- `/audit-context` — Added footer
+
+---
+
 ## v1.0.0 — Honesty Refactor
 
 *Released: March 2026*
